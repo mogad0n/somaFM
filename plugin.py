@@ -57,18 +57,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/7soul.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -83,18 +84,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/bagel.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -110,18 +112,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/beatblender.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -137,18 +140,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/bootliquor.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -163,18 +167,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/brfm.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f" 2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f" 3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f" 4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f" 5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f" 2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f" 3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f" 4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f" 5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -190,18 +195,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/cliqhop.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f" 2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f" 3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f" 4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f" 5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f" 2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f" 3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f" 4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f" 5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -217,18 +223,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/covers.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f" 2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f" 3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f" 4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f" 5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f" 2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f" 3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f" 4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f" 5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -243,18 +250,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/deepspaceone.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f" 2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f" 3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f" 4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f" 5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f" 2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f" 3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f" 4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f" 5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -270,18 +278,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/defcon.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -297,18 +306,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/digitalis.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -324,18 +334,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/dronezone.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -351,18 +362,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/dubstep.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -377,18 +389,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/fluid.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -403,18 +416,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/folkfwd.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -430,18 +444,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/groovesalad.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -456,18 +471,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/gsclassic.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -483,18 +499,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/illstreet.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -509,18 +526,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/indiepop.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -535,18 +553,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/indiepop.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -561,18 +580,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/lush.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -588,18 +608,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/missioncontrol.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -615,18 +636,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/poptron.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -641,18 +663,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/secretagent.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -667,18 +690,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/seventies.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -693,18 +717,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/sf1033.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -719,18 +744,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/sonicuniverse.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -745,18 +771,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/spacestation.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -771,18 +798,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/suburbsofgoa.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -797,18 +825,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/thetrip.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -823,18 +852,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/thistle.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -849,18 +879,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/u80s.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -876,18 +907,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/metal.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -902,18 +934,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/reggae.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -928,18 +961,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/scanner.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -954,18 +988,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/vaporwaves.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
@@ -980,18 +1015,19 @@ class SomaFM(callbacks.Plugin):
             r = requests.get(channels_url)
             cont = json.loads(r.content)
             chanlist = cont['channels']
-            playlist = chanlist['playlist'][0]['url']
+            playlist_list = chanlist['playlist'][0]
+            playlist = playlist_list['url']
             re = f"{chanlist['title']} - {chanlist['description']}, Genre: {chanlist['genre']} by dj: {chanlist['dj']}, Lastplayed: {chanlist['lastplaying']}, Direct Stream Link: {playlist} | There are {chanlist['listeners']} listeners to this stream"
         else:
             url = 'https://somafm.com/songs/specials.json'
             req = requests.get(url)
             songs = json.loads(req.content)
             radio = songs['id']
-            re1 = f" 1. {songs['songs'][0]['title']} by {songs['songs'][0]['artist']} from {songs['songs'][0]['album']} "
-            re2 = f"2. {songs['songs'][1]['title']} by {songs['songs'][1]['artist']} from {songs['songs'][1]['album']} "
-            re3 = f"3. {songs['songs'][2]['title']} by {songs['songs'][2]['artist']} from {songs['songs'][2]['album']} "
-            re4 = f"4. {songs['songs'][3]['title']} by {songs['songs'][3]['artist']} from {songs['songs'][3]['album']} "
-            re5 = f"5. {songs['songs'][4]['title']} by {songs['songs'][4]['artist']} from {songs['songs'][4]['album']} "
+            re1 = f" 1. \x02{songs['songs'][0]['title']}\x0f by \x02{songs['songs'][0]['artist']}\x0f from \x02{songs['songs'][0]['album']}\x0f "
+            re2 = f"2. \x02{songs['songs'][1]['title']}\x0f by \x02{songs['songs'][1]['artist']}\x0f from \x02{songs['songs'][1]['album']}\x0f "
+            re3 = f"3. \x02{songs['songs'][2]['title']}\x0f by \x02{songs['songs'][2]['artist']}\x0f from \x02{songs['songs'][2]['album']}\x0f "
+            re4 = f"4. \x02{songs['songs'][3]['title']}\x0f by \x02{songs['songs'][3]['artist']}\x0f from \x02{songs['songs'][3]['album']}\x0f "
+            re5 = f"5. \x02{songs['songs'][4]['title']}\x0f by \x02{songs['songs'][4]['artist']}\x0f from \x02{songs['songs'][4]['album']}\x0f "
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 

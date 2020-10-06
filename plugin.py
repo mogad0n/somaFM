@@ -58,8 +58,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[0]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/7soul.json'
@@ -86,8 +85,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[1]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/bagel.json'
@@ -115,8 +113,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[2]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/beatblender.json'
@@ -144,8 +141,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[3]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/bootliquor.json'
@@ -172,8 +168,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[4]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/brfm.json'
@@ -201,8 +196,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[5]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/cliqhop.json'
@@ -230,8 +224,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[6]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/covers.json'
@@ -258,8 +251,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[7]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/deepspaceone.json'
@@ -287,8 +279,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[8]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/defcon.json'
@@ -316,8 +307,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[9]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/digitalis.json'
@@ -345,8 +335,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[10]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/dronezone.json'
@@ -374,8 +363,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[11]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/dubstep.json'
@@ -402,8 +390,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[12]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/fluid.json'
@@ -430,8 +417,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[13]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/folkfwd.json'
@@ -459,8 +445,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[14]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/groovesalad.json'
@@ -487,8 +472,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[15]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/gsclassic.json'
@@ -516,8 +500,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[16]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/illstreet.json'
@@ -544,8 +527,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[16]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/indiepop.json'
@@ -572,8 +554,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[18]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/indiepop.json'
@@ -600,8 +581,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[19]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/lush.json'
@@ -629,8 +609,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[20]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/missioncontrol.json'
@@ -658,8 +637,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[21]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/poptron.json'
@@ -686,8 +664,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[22]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/secretagent.json'
@@ -714,8 +691,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[23]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/seventies.json'
@@ -742,8 +718,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[24]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/sf1033.json'
@@ -770,8 +745,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[25]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/sonicuniverse.json'
@@ -798,8 +772,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[26]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/spacestation.json'
@@ -826,8 +799,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[27]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/suburbsofgoa.json'
@@ -854,8 +826,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[28]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/thetrip.json'
@@ -882,8 +853,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[29]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/thistle.json'
@@ -910,8 +880,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[30]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/u80s.json'
@@ -939,8 +908,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[31]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/metal.json'
@@ -967,8 +935,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[32]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/reggae.json'
@@ -995,8 +962,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[33]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/scanner.json'
@@ -1023,8 +989,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[34]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/vaporwaves.json'
@@ -1051,8 +1016,7 @@ class SomaFM(callbacks.Plugin):
             cont = json.loads(r.content)
             chan_list = cont['channels']
             chanlist = chan_list[35]
-            playlist_list = chanlist['playlist'][0]
-            playlist = playlist_list['url']
+            playlist = chanlist['playlists'][0]
             re = f"\x02{chanlist['title']}\x0f - \x02{chanlist['description']}\x0f, Genre: \x02{chanlist['genre']} by dj: \x02{chanlist['dj']}\x0f, Lastplayed: \x02{chanlist['lastplaying']}\x0f, Direct Stream Link: {playlist} | There are \x02{chanlist['listeners']}\x0f listeners to this stream"
         else:
             url = 'https://somafm.com/songs/specials.json'

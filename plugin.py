@@ -46,7 +46,7 @@ channels_url = 'https://somafm.com/channels.json'
 class SomaFM(callbacks.Plugin):
     """Retrieves metadata from SomaFM"""
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def SevenSoul(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -72,7 +72,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def bagel(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -99,7 +99,7 @@ class SomaFM(callbacks.Plugin):
         irc.reply(re)
 
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def beatblender(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -126,7 +126,7 @@ class SomaFM(callbacks.Plugin):
         irc.reply(re)
 
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def bootliquor(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -152,7 +152,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def brfm(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -178,7 +178,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def cliqhop(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -206,7 +206,7 @@ class SomaFM(callbacks.Plugin):
         irc.reply(re)
 
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def covers(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -232,7 +232,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def deepspaceone(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -259,7 +259,7 @@ class SomaFM(callbacks.Plugin):
         irc.reply(re)
 
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def defcon(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -286,7 +286,7 @@ class SomaFM(callbacks.Plugin):
         irc.reply(re)
 
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def digitalis(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -313,7 +313,7 @@ class SomaFM(callbacks.Plugin):
         irc.reply(re)
 
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def dronezone(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -340,7 +340,7 @@ class SomaFM(callbacks.Plugin):
         irc.reply(re)
 
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def dubstep(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -366,7 +366,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def fluid(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -392,7 +392,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def folkfwd(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -419,7 +419,7 @@ class SomaFM(callbacks.Plugin):
         irc.reply(re)
 
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def groovesalad(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -445,7 +445,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def gsclassic(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -472,7 +472,7 @@ class SomaFM(callbacks.Plugin):
         irc.reply(re)
 
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def illstreet(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -498,7 +498,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def indiepop(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -524,7 +524,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def live(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -550,7 +550,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def lush(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -577,7 +577,7 @@ class SomaFM(callbacks.Plugin):
         irc.reply(re)
 
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def missioncontrol(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -604,7 +604,7 @@ class SomaFM(callbacks.Plugin):
         irc.reply(re)
 
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def poptron(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -630,7 +630,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def secretagent(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -656,7 +656,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def seventies(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -682,7 +682,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def sf1033(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -708,7 +708,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def sonicuniverse(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -734,7 +734,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def spacestation(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -760,7 +760,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def suburbsofgoa(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -786,7 +786,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def thetrip(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -812,7 +812,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def thistle(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -838,7 +838,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def u80s(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -865,7 +865,7 @@ class SomaFM(callbacks.Plugin):
         irc.reply(re)
 
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def metal(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -891,7 +891,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def reggae(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -917,7 +917,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def scanner(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -943,7 +943,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def vaporwaves(self, irc, msg, args, recent):
         """[<recent>]
 
@@ -969,7 +969,7 @@ class SomaFM(callbacks.Plugin):
             re = radio + re1 + re2 + re3 + re4 + re5
         irc.reply(re)
 
-    @wrap([optional("literal", ('recent'))])
+    @wrap([optional("literal", ("recent"))])
     def specials(self, irc, msg, args, recent):
         """[<recent>]
 
